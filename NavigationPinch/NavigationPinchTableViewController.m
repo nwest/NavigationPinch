@@ -19,7 +19,6 @@
 
 @implementation NavigationPinchTableViewController {
     NSArray *_colors;
-    BOOL _tabBarIsHidden;
 }
 
 - (id)initWithCoder:(NSCoder *)aDecoder
@@ -34,8 +33,6 @@
             ];
         }
     }
-    
-    _tabBarIsHidden = NO;
     return self;
 }
 
@@ -100,49 +97,18 @@
     }
 }
 
-#pragma mark - UINavigtionBar and UITabBar handling
+#pragma mark - UINavigtionBar hide n' seek
 
 - (void)hideBarsAnimated:(BOOL)animated
 {
     [self.navigationController setNavigationBarHidden:YES animated:animated];
-    [self hideTabBar];
+    [self.navigationController setToolbarHidden:YES animated:animated];
 }
 
 - (void)showBarsAnimated:(BOOL)animated
 {
     [self.navigationController setNavigationBarHidden:NO animated:animated];
-    [self showTabBar];
-}
-
-- (void)hideTabBar
-{
-    if (_tabBarIsHidden == NO) {
-        [UIView beginAnimations:nil context:NULL];
-        [UIView setAnimationDuration:0.4];
-        
-        self.parentViewController.tabBarController.tabBar.hidden = YES;
-        
-        // reset frame
-        
-        [UIView commitAnimations];
-        _tabBarIsHidden = YES;
-    }
-    
-}
-
-- (void)showTabBar
-{
-    if (_tabBarIsHidden) {
-        [UIView beginAnimations:nil context:NULL];
-        [UIView setAnimationDuration:0.4];
-        
-        self.parentViewController.tabBarController.tabBar.hidden = NO;
-        
-        // reset frame
-        
-        [UIView commitAnimations];
-        _tabBarIsHidden = NO;
-    }
+    [self.navigationController setToolbarHidden:NO animated:animated];
 }
 
 @end
