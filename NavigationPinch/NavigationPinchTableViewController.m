@@ -11,6 +11,8 @@
 
 @interface NavigationPinchTableViewController ()
 
+- (void)pinch:(UIPinchGestureRecognizer *)gesture;
+
 @property (nonatomic) UIColor *randColor;
 
 @end
@@ -39,6 +41,15 @@
     _randColor = [UIColor clearColor];
     if (_colors) _randColor = [_colors objectAtIndex:(arc4random() % [_colors count])];
     return _randColor;
+}
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+    [self.view addGestureRecognizer:[[UIPinchGestureRecognizer alloc]
+                                     initWithTarget:self
+                                             action:@selector(pinch:)]];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -70,6 +81,13 @@
     }
     
     return cell;
+}
+
+#pragma mark - Gesture recognizer handling
+
+- (void)pinch:(UIPinchGestureRecognizer *)gesture
+{
+    
 }
 
 @end
