@@ -19,6 +19,7 @@
 
 @implementation NavigationPinchTableViewController {
     NSArray *_colors;
+    BOOL _tabBarIsHidden;
 }
 
 - (id)initWithCoder:(NSCoder *)aDecoder
@@ -33,6 +34,8 @@
             ];
         }
     }
+    
+    _tabBarIsHidden = NO;
     return self;
 }
 
@@ -77,7 +80,8 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     if (!cell) {
-        cell = [[NavigationPinchTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
+        cell = [[NavigationPinchTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
+                                                   reuseIdentifier:@"Cell"];
     }
     
     return cell;
@@ -87,7 +91,58 @@
 
 - (void)pinch:(UIPinchGestureRecognizer *)gesture
 {
+    if (gesture.state == UIGestureRecognizerStateEnded) {
+        if (gesture.scale > 1) {
+            [self hideBarsAnimated:YES];
+        } else if (gesture.scale < 1) {
+            [self showBarsAnimated:YES];
+        }
+    }
+}
+
+#pragma mark - UINavigtionBar and UITabBar handling
+
+- (void)hideBarsAnimated:(BOOL)animated
+{
+    [self.navigationController setNavigationBarHidden:YES animated:animated];
+    [self hideTabBar];
+}
+
+- (void)showBarsAnimated:(BOOL)animated
+{
+    [self.navigationController setNavigationBarHidden:NO animated:animated];
+    [self showTabBar];
+}
+
+- (void)hideTabBar
+{
+    if (_tabBarIsHidden == NO) {
+        [UIView beginAnimations:nil context:NULL];
+        [UIView setAnimationDuration:0.4];
+        
+        self.parentViewController.tabBarController.tabBar.hidden = YES;
+        
+        // reset frame
+        
+        [UIView commitAnimations];
+        _tabBarIsHidden = YES;
+    }
     
+}
+
+- (void)showTabBar
+{
+    if (_tabBarIsHidden) {
+        [UIView beginAnimations:nil context:NULL];
+        [UIView setAnimationDuration:0.4];
+        
+        self.parentViewController.tabBarController.tabBar.hidden = NO;
+        
+        // reset frame
+        
+        [UIView commitAnimations];
+        _tabBarIsHidden = NO;
+    }
 }
 
 @end
