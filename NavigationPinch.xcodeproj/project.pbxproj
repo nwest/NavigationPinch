@@ -17,7 +17,8 @@
 		E7E30D11169DAE6300E2E1B2 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E7E30D10169DAE6300E2E1B2 /* Default@2x.png */; };
 		E7E30D13169DAE6300E2E1B2 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E7E30D12169DAE6300E2E1B2 /* Default-568h@2x.png */; };
 		E7E30D16169DAE6300E2E1B2 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7E30D14169DAE6300E2E1B2 /* MainStoryboard.storyboard */; };
-		E7E30D19169DAE6300E2E1B2 /* NavigationPinchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7E30D18169DAE6300E2E1B2 /* NavigationPinchViewController.m */; };
+		E7E30D21169DB0E300E2E1B2 /* NavigationPinchTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7E30D20169DB0E300E2E1B2 /* NavigationPinchTableViewController.m */; };
+		E7E30D24169DB94400E2E1B2 /* NavigationPinchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E7E30D23169DB94400E2E1B2 /* NavigationPinchTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,8 +36,10 @@
 		E7E30D10169DAE6300E2E1B2 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		E7E30D12169DAE6300E2E1B2 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		E7E30D15169DAE6300E2E1B2 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		E7E30D17169DAE6300E2E1B2 /* NavigationPinchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NavigationPinchViewController.h; sourceTree = "<group>"; };
-		E7E30D18169DAE6300E2E1B2 /* NavigationPinchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NavigationPinchViewController.m; sourceTree = "<group>"; };
+		E7E30D1F169DB0E300E2E1B2 /* NavigationPinchTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationPinchTableViewController.h; sourceTree = "<group>"; };
+		E7E30D20169DB0E300E2E1B2 /* NavigationPinchTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationPinchTableViewController.m; sourceTree = "<group>"; };
+		E7E30D22169DB94400E2E1B2 /* NavigationPinchTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationPinchTableViewCell.h; sourceTree = "<group>"; };
+		E7E30D23169DB94400E2E1B2 /* NavigationPinchTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationPinchTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,11 +86,13 @@
 		E7E30D02169DAE6300E2E1B2 /* NavigationPinch */ = {
 			isa = PBXGroup;
 			children = (
+				E7E30D14169DAE6300E2E1B2 /* MainStoryboard.storyboard */,
 				E7E30D0B169DAE6300E2E1B2 /* NavigationPinchAppDelegate.h */,
 				E7E30D0C169DAE6300E2E1B2 /* NavigationPinchAppDelegate.m */,
-				E7E30D14169DAE6300E2E1B2 /* MainStoryboard.storyboard */,
-				E7E30D17169DAE6300E2E1B2 /* NavigationPinchViewController.h */,
-				E7E30D18169DAE6300E2E1B2 /* NavigationPinchViewController.m */,
+				E7E30D22169DB94400E2E1B2 /* NavigationPinchTableViewCell.h */,
+				E7E30D23169DB94400E2E1B2 /* NavigationPinchTableViewCell.m */,
+				E7E30D1F169DB0E300E2E1B2 /* NavigationPinchTableViewController.h */,
+				E7E30D20169DB0E300E2E1B2 /* NavigationPinchTableViewController.m */,
 				E7E30D03169DAE6300E2E1B2 /* Supporting Files */,
 			);
 			path = NavigationPinch;
@@ -176,7 +181,8 @@
 			files = (
 				E7E30D09169DAE6300E2E1B2 /* main.m in Sources */,
 				E7E30D0D169DAE6300E2E1B2 /* NavigationPinchAppDelegate.m in Sources */,
-				E7E30D19169DAE6300E2E1B2 /* NavigationPinchViewController.m in Sources */,
+				E7E30D21169DB0E300E2E1B2 /* NavigationPinchTableViewController.m in Sources */,
+				E7E30D24169DB94400E2E1B2 /* NavigationPinchTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
