@@ -27,9 +27,11 @@
     if (self) {
         if (!_colors) {
             _colors = @[
-                [UIColor colorWithHue:0.500 saturation:1.000 brightness:0.502 alpha:1.000], //teal
-                [UIColor colorWithHue:0.250 saturation:1.000 brightness:0.502 alpha:1.000], //fern
-                [UIColor colorWithHue:1.000 saturation:0.600 brightness:1.000 alpha:1.000]  //salmon
+                [UIColor colorWithHue:0.161 saturation:0.447 brightness:0.737 alpha:1.000], //Ead
+                [UIColor colorWithHue:0.460 saturation:0.149 brightness:0.659 alpha:1.000], //Frith
+                [UIColor colorWithHue:0.225 saturation:0.108 brightness:0.831 alpha:1.000], //Helm
+                [UIColor colorWithHue:0.008 saturation:0.658 brightness:0.620 alpha:1.000], //Mond
+                [UIColor colorWithHue:0.205 saturation:0.259 brightness:0.333 alpha:1.000]  //Raed
             ];
         }
     }
