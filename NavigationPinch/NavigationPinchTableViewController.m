@@ -38,8 +38,10 @@
 
 - (UIColor *)randColor
 {
-    _randColor = [UIColor clearColor];
-    if (_colors) _randColor = [_colors objectAtIndex:(arc4random() % [_colors count])];
+    if (!_randColor) {
+        if (_colors) _randColor = [_colors objectAtIndex:(arc4random() % [_colors count])];
+        else _randColor = [UIColor clearColor];
+    }
     return _randColor;
 }
 
@@ -67,6 +69,14 @@
     [super viewWillAppear:animated];
     
     self.view.backgroundColor = self.randColor;
+   
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    self.navigationController.navigationBar.tintColor = self.randColor;
+    self.navigationController.toolbar.tintColor = self.randColor;
 }
 
 #pragma mark - Table view data source
