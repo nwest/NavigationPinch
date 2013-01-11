@@ -50,6 +50,16 @@
     [self.view addGestureRecognizer:[[UIPinchGestureRecognizer alloc]
                                      initWithTarget:self
                                              action:@selector(pinch:)]];
+    
+    [self.tableView addGestureRecognizer:[[UISwipeGestureRecognizer alloc]
+                                          initWithTarget:self
+                                                  action:@selector(swipe:)]];
+    
+    UISwipeGestureRecognizer *swipe = [[UISwipeGestureRecognizer alloc]
+                                       initWithTarget:self
+                                               action:@selector(swipe:)];
+    swipe.direction = UISwipeGestureRecognizerDirectionLeft;
+    [self.tableView addGestureRecognizer:swipe];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -94,6 +104,16 @@
         } else if (gesture.scale < 1) {
             [self showBarsAnimated:YES];
         }
+    }
+}
+
+- (void)swipe:(UISwipeGestureRecognizer *)gesture
+{
+    if (gesture.direction == UISwipeGestureRecognizerDirectionRight) {
+        [self.navigationController popViewControllerAnimated:YES];
+    }
+    else if (gesture.direction == UISwipeGestureRecognizerDirectionLeft) {
+        [self performSegueWithIdentifier:@"Push" sender:self];
     }
 }
 

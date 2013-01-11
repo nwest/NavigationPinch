@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E742ED3316A06ACA00FD8897 /* NavigationPinchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E742ED3216A06ACA00FD8897 /* NavigationPinchViewController.m */; };
 		E7E30CFD169DAE6300E2E1B2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7E30CFC169DAE6300E2E1B2 /* UIKit.framework */; };
 		E7E30CFF169DAE6300E2E1B2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7E30CFE169DAE6300E2E1B2 /* Foundation.framework */; };
 		E7E30D01169DAE6300E2E1B2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7E30D00169DAE6300E2E1B2 /* CoreGraphics.framework */; };
@@ -22,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E742ED3116A06ACA00FD8897 /* NavigationPinchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationPinchViewController.h; sourceTree = "<group>"; };
+		E742ED3216A06ACA00FD8897 /* NavigationPinchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationPinchViewController.m; sourceTree = "<group>"; };
 		E7E30CF8169DAE6300E2E1B2 /* NavigationPinch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NavigationPinch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7E30CFC169DAE6300E2E1B2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E7E30CFE169DAE6300E2E1B2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -93,6 +96,8 @@
 				E7E30D23169DB94400E2E1B2 /* NavigationPinchTableViewCell.m */,
 				E7E30D1F169DB0E300E2E1B2 /* NavigationPinchTableViewController.h */,
 				E7E30D20169DB0E300E2E1B2 /* NavigationPinchTableViewController.m */,
+				E742ED3116A06ACA00FD8897 /* NavigationPinchViewController.h */,
+				E742ED3216A06ACA00FD8897 /* NavigationPinchViewController.m */,
 				E7E30D03169DAE6300E2E1B2 /* Supporting Files */,
 			);
 			path = NavigationPinch;
@@ -183,6 +188,7 @@
 				E7E30D0D169DAE6300E2E1B2 /* NavigationPinchAppDelegate.m in Sources */,
 				E7E30D21169DB0E300E2E1B2 /* NavigationPinchTableViewController.m in Sources */,
 				E7E30D24169DB94400E2E1B2 /* NavigationPinchTableViewCell.m in Sources */,
+				E742ED3316A06ACA00FD8897 /* NavigationPinchViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,6 +305,7 @@
 				E7E30D1E169DAE6300E2E1B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -34,7 +34,7 @@
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <connections>
-                                    <segue destination="jnv-SM-MaC" kind="push" id="FPa-Ol-oCa"/>
+                                    <segue destination="jnv-SM-MaC" kind="push" identifier="Push" id="FPa-Ol-oCa"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -47,7 +47,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Omu-hI-u5h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="221" y="-213"/>
+            <point key="canvasLocation" x="-421" y="-243"/>
         </scene>
         <!--Navigation Pinch Table View Controller - Layer 2-->
         <scene sceneID="xVq-Q6-Ylo">
@@ -81,7 +81,7 @@
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <connections>
-                                    <segue destination="hXc-gA-UG8" kind="push" id="9um-XY-HFL"/>
+                                    <segue destination="hXc-gA-UG8" kind="push" identifier="Push" id="9um-XY-HFL"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -94,7 +94,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MG0-Jn-RTY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="593" y="-213"/>
+            <point key="canvasLocation" x="-49" y="-243"/>
         </scene>
         <!--Navigation Controller - Item-->
         <scene sceneID="PI7-2k-gh1">
@@ -108,7 +108,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="FJm-A3-cgF">
-                        <rect key="frame" x="0.0" y="416" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="524" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </toolbar>
                     <connections>
@@ -117,7 +117,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dzs-nX-UaN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-139" y="-213"/>
+            <point key="canvasLocation" x="-781" y="-243"/>
         </scene>
         <!--Navigation Pinch Table View Controller - Layer 3-->
         <scene sceneID="YxC-ON-aQQ">
@@ -151,7 +151,7 @@
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <connections>
-                                    <segue destination="xGe-gh-yFS" kind="push" id="p8q-j4-U6p"/>
+                                    <segue destination="xGe-gh-yFS" kind="push" identifier="Push" id="p8q-j4-U6p"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -164,7 +164,22 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a4W-no-qJf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="966" y="-213"/>
+            <point key="canvasLocation" x="324" y="-243"/>
+        </scene>
+        <!--Navigation Pinch View Controller-->
+        <scene sceneID="7Hx-wg-hgO">
+            <objects>
+                <viewController id="Ywe-q6-NBa" customClass="NavigationPinchViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="V1P-cl-xBK" customClass="NavigationPinchTableViewCell">
+                        <rect key="frame" x="0.0" y="64" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="e9l-zs-Yqf"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tXR-ib-jYP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1129" y="-243"/>
         </scene>
         <!--Navigation Pinch Table View Controller - Layer 4-->
         <scene sceneID="eNX-ix-lPs">
@@ -197,6 +212,9 @@
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
+                                <connections>
+                                    <segue destination="Ywe-q6-NBa" kind="push" identifier="Push" id="jxI-P9-Iey"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -208,7 +226,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bFE-A9-n7c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1341" y="-213"/>
+            <point key="canvasLocation" x="699" y="-243"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
