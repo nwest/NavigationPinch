@@ -69,12 +69,12 @@
     [super viewWillAppear:animated];
     
     self.view.backgroundColor = self.randColor;
-   
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+    
     self.navigationController.navigationBar.tintColor = self.randColor;
     self.navigationController.toolbar.tintColor = self.randColor;
 }
